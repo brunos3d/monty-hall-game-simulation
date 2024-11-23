@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monty Hall Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      .doors {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .door {
+        width: 100px;
+        height: 150px;
+        margin: 0 10px;
+        border: 4px solid #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 18px;
+        color: white;
+        background-color: #666;
+        transition: background-color 150ms, border 150ms;
+      }
+      .door:hover {
+        background-color: #999;
+      }
+      .door.selected {
+        background-color: #4caf50; /* Green background */
+        border: 4px solid #ffeb3b; /* Bright yellow border */
+        color: black;
+      }
+      .console {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        height: 200px;
+        overflow-y: auto;
+        text-align: left;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Monty Hall Game</h1>
+    <div class="doors">
+      <div class="door" data-id="0">Door 1</div>
+      <div class="door" data-id="1">Door 2</div>
+      <div class="door" data-id="2">Door 3</div>
+    </div>
+    <div>
+      <button id="play-once">Play Once</button>
+      <button id="autoplay">Auto Play</button>
+      <input type="number" id="iterations" placeholder="Enter N" min="1" style="width: 80px" />
+    </div>
+    <div class="console" id="console"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
